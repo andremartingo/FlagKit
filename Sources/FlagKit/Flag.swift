@@ -11,11 +11,12 @@ import Foundation
     import AppKit
 #endif
 
+@objc(FKFlag)
 public class Flag: NSObject {
     /**
      Country code of the flag
      */
-    public let countryCode: String
+    @objc public let countryCode: String
 
 #if os(iOS) || os(tvOS)
     /**
@@ -26,7 +27,7 @@ public class Flag: NSObject {
     /**
      Returns a flag if the country code is supported, otherwise it returns nil
      */
-    public init?(countryCode: String) {
+    @objc public init?(countryCode: String) {
         self.countryCode = countryCode
         self.originalImage = Image(countryCode, bundle: FlagKit.assetBundle)
     }
