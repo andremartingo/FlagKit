@@ -6,9 +6,7 @@ import PackageDescription
 let package = Package(
     name: "FlagKit",
     platforms: [
-        .iOS(.v12),
-        .tvOS(.v12),
-        .macOS(.v10_12)
+        .iOS(.v13)
     ],
     products: [
         .library(name: "FlagKit", targets: ["FlagKit"]),
